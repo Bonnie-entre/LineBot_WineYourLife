@@ -4,8 +4,6 @@
 1. 傳送定位，給予方圓 3km 內的 3個酒吧資訊
 2. 未去過的酒吧做紀錄
 3. 查詢個人酒吧紀錄
-https://ithelp.ithome.com.tw/articles/10196704
-4. 排程提醒??
 <br>
 
 ### Using
