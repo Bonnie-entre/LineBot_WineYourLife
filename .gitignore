@@ -1,0 +1,8 @@
+.env
+
+test_chatgpt.py
+/app/service_account.json    
+
+__pycache__
+/app/__pycache__
+/app/routers/__pycache__
