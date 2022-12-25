@@ -1,22 +1,37 @@
 ## Start
 
+Step 1: ngrok init
+Step 2: start reload your app `python /app/main.py`
+Step 3: modify webhook url of Line(https://developers.line.biz/zh-hant/), verify it
+Step 4: chat with Wine_Your_Life
+<br><br>
+
+
 ### Function
 1. 傳送定位，給予方圓 3km 內的 3個酒吧資訊
-2. 未去過的酒吧做紀錄
+2. 為去過的酒吧做紀錄
 3. 查詢個人酒吧紀錄
+<br>
+
+### FSM picture
+![alt text](https://github.com/Bonnie-entre/LineBot_WineYourLife/blob/main/fsm.png?raw=true)
 <br>
 
 ### Using
 - Google Map API
 - Google Drive API
 (save wine-your-life.json file in ~/.config/gspread)
-- 
+- Google Sheet API
 <br>
 
 ### Develope
 
 in conda env,
 `python -m uvicorn app.main:app --reload`
+
+ps. use conda env LineBot in local env
+<br>
+
 
 ### Learning
 
@@ -39,6 +54,20 @@ Flex Message：https://ithelp.ithome.com.tw/articles/10243224
 
 * Google sheet
 https://www.youtube.com/watch?v=bu5wXjz2KvU&t=347
+```
+# worksheet_list = sh.worksheets()
+# print(worksheet_list)
+
+# values_list = wks_sh2.col_values(1)
+# print(values_list)
+
+# print("Rows: ", wks_sh2.row_count)
+# print("Cols: ", wks_sh2.col_count)
+# print(wks_sh2.get_all_values())
+
+# df = pd.DataFrame(sheet.get_all_records())
+# print(df)
+```
 
 * draw fsm
 https://python.hotexamples.com/examples/transitions/Machine/get_graph/python-machine-get_graph-method-examples.html

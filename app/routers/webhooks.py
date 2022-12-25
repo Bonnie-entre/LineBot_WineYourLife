@@ -66,7 +66,7 @@ def message_text(event):
         line_bot_api.reply_message(
             event.reply_token,
             messages=FlexSendMessage(
-            alt_text="測試訊息",
+            alt_text="My Wine Life Records",
             contents={
                 "type": "carousel",
                 "contents": ShowMyRecords(event.source.user_id)
@@ -76,10 +76,11 @@ def message_text(event):
         return
     elif  ("紀錄" in event.message.text) or ("記錄" in event.message.text) or ("record" in event.message.text) or ("Record" in event.message.text):
         reply = TextMsgReply(event.source.user_id, 1, event.message.text)
-
+    elif ("Monday" in event.message.text and "Wednesday" in event.message.text) or ("https" in event.message.text):
+        reply = ''
     else:
-        # reply = TextMsgReply(event.source.user_id, -1, event.message.text)
-        reply = event.message.text
+        reply = TextMsgReply(event.source.user_id, -1, event.message.text)
+        # reply = event.message.text
 
     line_bot_api.reply_message(
         event.reply_token,

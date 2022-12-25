@@ -186,7 +186,8 @@ def TextMsgReply(usrId, record_include, line_msg):
         else:
             wks_sh1.append_row([usrId, "6"])
             sh1_record_state = 6
-            ReplyText="reply normal"
+            # ReplyText="reply normal"
+            ReplyText = line_msg
 
     else:
         if(record_include!=-1):     #if("record" in event.text):
@@ -197,7 +198,8 @@ def TextMsgReply(usrId, record_include, line_msg):
             # flag_modify_sh2 = 1
             print("keep modify sheet2")
         elif(sh1_record_state>=6):           #other msg reply
-            ReplyText = "reply others, maybe chatgpt" 
+            # ReplyText = "reply others, maybe chatgpt" 
+            ReplyText = line_msg
             print("reply others, maybe chatgpt")
 
     print("state ", sh1_record_state)
@@ -251,15 +253,3 @@ def TextMsgReply(usrId, record_include, line_msg):
 
     return ReplyText
 
-# worksheet_list = sh.worksheets()
-# print(worksheet_list)
-
-# values_list = wks_sh2.col_values(1)
-# print(values_list)
-
-# print("Rows: ", wks_sh2.row_count)
-# print("Cols: ", wks_sh2.col_count)
-# print(wks_sh2.get_all_values())
-
-# df = pd.DataFrame(sheet.get_all_records())
-# print(df)
