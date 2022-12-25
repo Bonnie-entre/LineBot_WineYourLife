@@ -179,10 +179,10 @@ def TextMsgReply(usrId, record_include, line_msg):
 
 
     if(sh1_id_col==-1):
-        if(record_include):
+        if(record_include==1):
             wks_sh1.append_row([usrId, "0"])
             sh1_record_state = 0
-            print("start modify sheet2")
+            print("start modify sheet2_", record_include)
         else:
             wks_sh1.append_row([usrId, "6"])
             sh1_record_state = 6
@@ -227,27 +227,27 @@ def TextMsgReply(usrId, record_include, line_msg):
             wks_sh1.update('B'+str(sh1_id_col), '2')
             wks_sh2.update('B'+str(sh2_modified_row), '2')
             wks_sh2.update('C'+str(sh2_modified_row), line_msg) #name
-            ReplyText = "which date did you go?"
+            ReplyText = "which 📆 did you go?"
         elif(sh1_record_state==2):
             wks_sh1.update('B'+str(sh1_id_col), '3')
             wks_sh2.update('B'+str(sh2_modified_row), '3')
             wks_sh2.update('D'+str(sh2_modified_row), line_msg) #date
-            ReplyText = "how many start would you like to give to this bar?"
+            ReplyText = "how many ⭐ would you like to score this bar?"
         elif(sh1_record_state==3):
             wks_sh1.update('B'+str(sh1_id_col), '4')
             wks_sh2.update('B'+str(sh2_modified_row), '4')
             wks_sh2.update('E'+str(sh2_modified_row), line_msg) #star
-            ReplyText = "Comment something for this bar. (if none, type none~)"
+            ReplyText = "Comment something for this bar. \n(if none, type none~)"
         elif(sh1_record_state==4):
             wks_sh1.update('B'+str(sh1_id_col), '5')
             wks_sh2.update('B'+str(sh2_modified_row), '5')
             wks_sh2.update('F'+str(sh2_modified_row), line_msg) #comment
-            ReplyText = "Last question: whould you like to go next time?"
+            ReplyText = "Last, whould you like to go next time?"
         elif(sh1_record_state==5):
             wks_sh1.update('B'+str(sh1_id_col), '6')
             wks_sh2.update('B'+str(sh2_modified_row), '6')
             wks_sh2.update('G'+str(sh2_modified_row), line_msg) #next time
-            ReplyText = "Added bar record Successfully!!"
+            ReplyText = "Added bar record Successfully!! Cheeers🥂"
         else:
             "err"
 
