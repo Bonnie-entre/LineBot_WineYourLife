@@ -52,6 +52,7 @@ https://blog.csdn.net/u012814696/article/details/55098249
 各種：https://ithelp.ithome.com.tw/articles/10282102
 https://ithelp.ithome.com.tw/articles/10195531
 Flex Message：https://ithelp.ithome.com.tw/articles/10243224
+* Carousel 內最多可以放 12 個 Bubble
 
 * Google sheet
 https://www.youtube.com/watch?v=bu5wXjz2KvU&t=347

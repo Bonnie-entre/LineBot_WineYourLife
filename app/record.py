@@ -23,7 +23,10 @@ def ShowMyRecords(usrId):
                 comment = list_sh2_all[i][5]
                 next_time = list_sh2_all[i][6]
                 star_img = []
-                for i in range(int(list_sh2_all[i][4])):
+                num = range(int(list_sh2_all[i][4]))
+                if(num>12):     # Carousel can only have 12 Bubble at most
+                    num = 12
+                for i in num:
                     star_img.append({
                             "type": "icon",
                             "size": "sm",
